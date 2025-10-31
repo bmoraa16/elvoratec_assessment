@@ -7,6 +7,7 @@ import 'package:prueba_elvoratec/features/home/presentation/widgets/load_more_bu
 import 'package:prueba_elvoratec/features/home/presentation/widgets/pokemon_grid.dart';
 import 'package:prueba_elvoratec/features/home/presentation/widgets/searchbar_pokemon.dart';
 import 'package:prueba_elvoratec/theme/app_colors.dart';
+import 'package:prueba_elvoratec/theme/widgets/hb_scaffold_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final bloc = context.watch<DrSearchBloc>();
     final canLoadMore = bloc.canLoadMore;
 
-    return Scaffold(
+    return HbScaffoldWidget(
       body: SafeArea(
         child: BlocBuilder<DrSearchBloc, GetPokemonState>(
           builder: (context, state) {
