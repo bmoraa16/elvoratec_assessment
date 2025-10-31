@@ -1,3 +1,8 @@
+## 🎬 Vídeo de Demostración / Demo Video
+<video src="assets/demo.mp4" controls muted playsinline width="700"></video>
+
+---
+
 # 📱 Ejecución de la App Flutter (ES)
 
 Este proyecto está construido con **Flutter 3.24.0**. Asegúrate de tener instalada la versión correcta para evitar problemas de compatibilidad.
