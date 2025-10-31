@@ -4,6 +4,14 @@ https://github.com/user-attachments/assets/5a0fe477-2e46-4478-9ec2-2c87bfcc9ea9
 
 ---
 
+## 🎨 Diseño UX/UI / UX/UI Design
+
+**ES:** El diseño fue obtenido del Figma oficial de Pokédex (Community).  
+**EN:** The design was sourced from the official Pokédex Figma (Community).  
+**Link:** https://www.figma.com/design/jIIrEkkQifoCVKLtVoFkK1/Pok%C3%A9dex--Community-?node-id=314-3&p=f
+
+---
+
 # 📱 Ejecución de la App Flutter (ES)
 
 Este proyecto está construido con **Flutter 3.24.0**. Asegúrate de tener instalada la versión correcta para evitar problemas de compatibilidad.
