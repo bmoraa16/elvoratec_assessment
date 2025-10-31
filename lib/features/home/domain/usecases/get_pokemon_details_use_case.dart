@@ -5,10 +5,10 @@ import 'package:prueba_elvoratec/features/home/domain/entities/pokemon_details.d
 import 'package:prueba_elvoratec/features/home/domain/repositories/pokemon_list_repository.dart';
 
 @lazySingleton
-class GetFavoriteProvidersUseCase {
+class GetPokemonDetailsUseCase {
   final PokemonListRepository _pokemonDetailsRepository;
 
-  GetFavoriteProvidersUseCase(this._pokemonDetailsRepository);
+  GetPokemonDetailsUseCase(this._pokemonDetailsRepository);
 
   Future<Result<PokemonDetails, NetworkError>> execute(
       String pokemonIndex) async {

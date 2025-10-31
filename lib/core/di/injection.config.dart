@@ -25,6 +25,8 @@ import '../../features/home/domain/usecases/get_pokemon_details_use_case.dart'
     as _i799;
 import '../../features/home/domain/usecases/get_pokemon_list_use_case.dart'
     as _i165;
+import '../../features/home/presentation/bloc/get_pokemon_list_bloc.dart'
+    as _i855;
 import '../../features/splash/presentation/cubit/splash_cubit.dart' as _i125;
 import '../managers/network_manager.dart' as _i291;
 
@@ -47,10 +49,14 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i568.PokemonListDataSourceImpl(gh<_i291.NetworkManager>()));
     gh.factory<_i893.PokemonListRepository>(() =>
         _i115.PokemonListRepositoryImpl(gh<_i870.PokemonListDataSource>()));
-    gh.lazySingleton<_i799.GetFavoriteProvidersUseCase>(() =>
-        _i799.GetFavoriteProvidersUseCase(gh<_i893.PokemonListRepository>()));
+    gh.lazySingleton<_i799.GetPokemonDetailsUseCase>(() =>
+        _i799.GetPokemonDetailsUseCase(gh<_i893.PokemonListRepository>()));
     gh.lazySingleton<_i165.GetPokemonListTokenUseCase>(() =>
         _i165.GetPokemonListTokenUseCase(gh<_i893.PokemonListRepository>()));
+    gh.singleton<_i855.DrSearchBloc>(() => _i855.DrSearchBloc(
+          gh<_i165.GetPokemonListTokenUseCase>(),
+          gh<_i799.GetPokemonDetailsUseCase>(),
+        ));
     return this;
   }
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:prueba_elvoratec/core/di/injection.dart';
 import 'package:prueba_elvoratec/features/dashboard/presentation/bloc/dashboard_navigation_cubit.dart';
 import 'package:prueba_elvoratec/features/dashboard/utils/loading_mixin.dart';
+import 'package:prueba_elvoratec/features/home/presentation/pages/home_screen.dart';
+import 'package:prueba_elvoratec/features/home/presentation/widgets/app_bar_home.dart';
 import 'package:prueba_elvoratec/theme/app_colors.dart';
 import 'package:prueba_elvoratec/theme/widgets/hb_scaffold_widget.dart';
 
@@ -30,15 +32,11 @@ class _DashboardScreenState extends State<DashboardScreen>
   @override
   Widget build(BuildContext context) {
     return HbScaffoldWidget(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      body: PageView(
-        physics: const NeverScrollableScrollPhysics(),
-        controller: getIt<DashboardNavigationCubit>().pageController,
-        children: [
-          Container(
-            color: AppColors.hbRedPrimary,
-          )
-        ],
+      appBar: const AppBarHome(),
+      backgroundColor: AppColors.hbRedPrimary,
+      body: const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: HomeScreen(),
       ),
     );
   }
