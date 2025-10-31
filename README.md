@@ -1,6 +1,10 @@
 ## 🎬 Vídeo de Demostración / Demo Video
 
-https://github.com/bmoraa16/elvoratec_video_demo/raw/refs/heads/main/demo.mp4
+
+
+
+https://github.com/user-attachments/assets/b41c36a9-9742-41b0-90fa-6344df4019e9
+
 
 ---
 
