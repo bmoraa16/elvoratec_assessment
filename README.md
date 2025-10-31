@@ -1,10 +1,6 @@
 ## 🎬 Vídeo de Demostración / Demo Video
 
-
-
-
-https://github.com/user-attachments/assets/b41c36a9-9742-41b0-90fa-6344df4019e9
-
+https://github.com/user-attachments/assets/5a0fe477-2e46-4478-9ec2-2c87bfcc9ea9
 
 ---
 
