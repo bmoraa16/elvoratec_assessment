@@ -30,7 +30,7 @@ class TestRouter {
           return MultiBlocProvider(
             providers: [
               BlocProvider.value(value: getIt<DashboardNavigationCubit>()),
-              BlocProvider.value(value: getIt<DrSearchBloc>()),
+              BlocProvider.value(value: getIt<GetPokemonListBloc>()),
             ],
             child: const DashboardScreen(),
           );

@@ -14,10 +14,10 @@ extension GoRouterExtension on BuildContext {
   void popUntil(String routeName) {
     final router = GoRouter.of(this);
     while (router.canPop()) {
-      if (router.state?.fullPath == routeName) break;
+      if (router.state.fullPath == routeName) break;
       router.pop();
     }
-    if (router.state?.fullPath != routeName) debugPrint("Route not found");
+    if (router.state.fullPath != routeName) debugPrint("Route not found");
   }
 
   void popUntilCount(int count) {

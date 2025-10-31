@@ -22,17 +22,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    context.read<DrSearchBloc>().add(const GetPokemonInitializeEvent());
+    context.read<GetPokemonListBloc>().add(const GetPokemonInitializeEvent());
   }
 
   @override
   Widget build(BuildContext context) {
-    final bloc = context.watch<DrSearchBloc>();
+    final bloc = context.watch<GetPokemonListBloc>();
     final canLoadMore = bloc.canLoadMore;
 
     return HbScaffoldWidget(
       body: SafeArea(
-        child: BlocBuilder<DrSearchBloc, GetPokemonState>(
+        child: BlocBuilder<GetPokemonListBloc, GetPokemonState>(
           builder: (context, state) {
             if (state is GetPokemonLoading) {
               return const Center(child: CircularProgressIndicator());
@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         currentSortType: bloc.currentSortType,
                         onSearchChanged: (value) {
                           context
-                              .read<DrSearchBloc>()
+                              .read<GetPokemonListBloc>()
                               .add(SearchPokemonEvent(value));
                         },
                         onSortTap: () {
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       isLoadingMore: state.isLoadingMore,
                       onPressed: () {
                         context
-                            .read<DrSearchBloc>()
+                            .read<GetPokemonListBloc>()
                             .add(const LoadMorePokemonEvent());
                       },
                     ),
@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
 
     if (selectedSort != null && context.mounted) {
-      context.read<DrSearchBloc>().add(ChangeSortEvent(selectedSort));
+      context.read<GetPokemonListBloc>().add(ChangeSortEvent(selectedSort));
     }
   }
 }

@@ -58,7 +58,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i684.LoadMorePokemonListTokenUseCase>(() =>
         _i684.LoadMorePokemonListTokenUseCase(
             gh<_i893.PokemonListRepository>()));
-    gh.singleton<_i855.DrSearchBloc>(() => _i855.DrSearchBloc(
+    gh.singleton<_i855.GetPokemonListBloc>(() => _i855.GetPokemonListBloc(
           gh<_i165.GetPokemonListTokenUseCase>(),
           gh<_i799.GetPokemonDetailsUseCase>(),
           gh<_i684.LoadMorePokemonListTokenUseCase>(),

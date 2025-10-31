@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
@@ -18,12 +20,12 @@ enum SortType {
 }
 
 @singleton
-class DrSearchBloc extends Bloc<GetPokemonListEvent, GetPokemonState> {
+class GetPokemonListBloc extends Bloc<GetPokemonListEvent, GetPokemonState> {
   final GetPokemonListTokenUseCase _getPokemonList;
   final GetPokemonDetailsUseCase _getPokemonDetails;
   final LoadMorePokemonListTokenUseCase _loadMorePokemonDetails;
 
-  DrSearchBloc(
+  GetPokemonListBloc(
     this._getPokemonList,
     this._getPokemonDetails,
     this._loadMorePokemonDetails,
