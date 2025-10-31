@@ -6,6 +6,10 @@ import 'package:prueba_elvoratec/features/home/data/models/pokemon_response_dto.
 abstract interface class PokemonListDataSource {
   Future<Result<PokemonResponseDto, NetworkError>> getPokemonList();
 
+  Future<Result<PokemonResponseDto, NetworkError>> loadMorePokemonList({
+    required String nextUrl,
+  });
+
   Future<Result<PokemonDetailsDto, NetworkError>> getPokemonDetails({
     required String pokemonIndex,
   });

@@ -6,6 +6,10 @@ import 'package:prueba_elvoratec/features/home/domain/entities/pokemon_response.
 abstract interface class PokemonListRepository {
   Future<Result<PokemonResponse, NetworkError>> getPokemonList();
 
+  Future<Result<PokemonResponse, NetworkError>> loadMorePokemonList({
+    required String nextUrl,
+  });
+
   Future<Result<PokemonDetails, NetworkError>> getPokemonDetails({
     required String pokemonIndex,
   });
