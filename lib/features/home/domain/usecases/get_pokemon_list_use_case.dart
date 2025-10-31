@@ -5,10 +5,10 @@ import 'package:prueba_elvoratec/features/home/domain/entities/pokemon_response.
 import 'package:prueba_elvoratec/features/home/domain/repositories/pokemon_list_repository.dart';
 
 @lazySingleton
-class GetZocdocAnonymousTokenUseCase {
+class GetPokemonListTokenUseCase {
   final PokemonListRepository _pokemonListRepository;
 
-  GetZocdocAnonymousTokenUseCase(this._pokemonListRepository);
+  GetPokemonListTokenUseCase(this._pokemonListRepository);
 
   Future<Result<PokemonResponse, NetworkError>> execute() async {
     return await _pokemonListRepository.getPokemonList();

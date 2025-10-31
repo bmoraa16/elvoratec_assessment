@@ -21,6 +21,8 @@ import '../../features/home/data/repositories/pokemon_list_repository_impl.dart'
     as _i115;
 import '../../features/home/domain/repositories/pokemon_list_repository.dart'
     as _i893;
+import '../../features/home/domain/usecases/get_pokemon_details_use_case.dart'
+    as _i799;
 import '../../features/home/domain/usecases/get_pokemon_list_use_case.dart'
     as _i165;
 import '../../features/splash/presentation/cubit/splash_cubit.dart' as _i125;
@@ -45,9 +47,10 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i568.PokemonListDataSourceImpl(gh<_i291.NetworkManager>()));
     gh.factory<_i893.PokemonListRepository>(() =>
         _i115.PokemonListRepositoryImpl(gh<_i870.PokemonListDataSource>()));
-    gh.lazySingleton<_i165.GetZocdocAnonymousTokenUseCase>(() =>
-        _i165.GetZocdocAnonymousTokenUseCase(
-            gh<_i893.PokemonListRepository>()));
+    gh.lazySingleton<_i799.GetFavoriteProvidersUseCase>(() =>
+        _i799.GetFavoriteProvidersUseCase(gh<_i893.PokemonListRepository>()));
+    gh.lazySingleton<_i165.GetPokemonListTokenUseCase>(() =>
+        _i165.GetPokemonListTokenUseCase(gh<_i893.PokemonListRepository>()));
     return this;
   }
 }
