@@ -1,8 +1,6 @@
 ## 🎬 Vídeo de Demostración / Demo Video
-<video controls muted playsinline width="700">
-  <source src="assets/demo.mp4" type="video/mp4">
-  Tu navegador no soporta video HTML5. <a href="assets/demo.mp4">Descargar demo.mp4</a>
-</video>
+
+https://github.com/bmoraa16/elvoratec_video_demo/raw/refs/heads/main/demo.mp4
 
 ---
 
